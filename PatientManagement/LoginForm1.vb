@@ -9,11 +9,16 @@ Public Class LoginForm
     ' such as the username, display name, etc.
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        Me.Close()
-    End Sub
+        If txtUsername.Text = "admin" AndAlso txtPassword.Text = "admin" Then
 
-    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
-        Me.Close()
-    End Sub
+            MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+            Dim menuPage As New Dashboard()
+            menuPage.Show()
+            HomePage.WindowState = FormWindowState.Minimized
+            Me.Hide()
+        Else
+            MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
 End Class

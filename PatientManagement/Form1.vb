@@ -1,7 +1,9 @@
 ﻿Public Class HomePage
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.SetStyle(ControlStyles.AllPaintingInWmPaint Or ControlStyles.UserPaint Or ControlStyles.DoubleBuffer, True)
+
         Me.Text = "Patient Management System"
-        Dim bgImagePath As String = "C:\\Users\\User\\Desktop\\PatientManagement\\Images\\background.jpeg"
+        Dim bgImagePath As String = "C:\Users\User\Desktop\PatientManagement\PatientManagement\Images\background.jpeg"
         If IO.File.Exists(bgImagePath) Then
             Me.BackgroundImage = Image.FromFile(bgImagePath)
             Me.BackgroundImageLayout = ImageLayout.Stretch ' Fit image to form

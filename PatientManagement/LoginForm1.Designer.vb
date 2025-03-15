@@ -14,11 +14,10 @@ Partial Class LoginForm
             MyBase.Dispose(disposing)
         End Try
     End Sub
-    Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
     Friend WithEvents UsernameLabel As System.Windows.Forms.Label
     Friend WithEvents PasswordLabel As System.Windows.Forms.Label
-    Friend WithEvents UsernameTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PasswordTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents txtUsername As System.Windows.Forms.TextBox
+    Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents OK As System.Windows.Forms.Button
     Friend WithEvents Cancel As System.Windows.Forms.Button
 
@@ -30,61 +29,52 @@ Partial Class LoginForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
-        LogoPictureBox = New PictureBox()
         UsernameLabel = New Label()
         PasswordLabel = New Label()
-        UsernameTextBox = New TextBox()
-        PasswordTextBox = New TextBox()
+        txtUsername = New TextBox()
+        txtPassword = New TextBox()
         OK = New Button()
         Cancel = New Button()
-        CType(LogoPictureBox, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' LogoPictureBox
-        ' 
-        LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), Image)
-        LogoPictureBox.Location = New Point(0, 0)
-        LogoPictureBox.Name = "LogoPictureBox"
-        LogoPictureBox.Size = New Size(165, 193)
-        LogoPictureBox.TabIndex = 0
-        LogoPictureBox.TabStop = False
         ' 
         ' UsernameLabel
         ' 
-        UsernameLabel.Location = New Point(172, 24)
+        UsernameLabel.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        UsernameLabel.Location = New Point(0, 43)
         UsernameLabel.Name = "UsernameLabel"
-        UsernameLabel.Size = New Size(220, 23)
+        UsernameLabel.Size = New Size(126, 23)
         UsernameLabel.TabIndex = 0
         UsernameLabel.Text = "&User name"
         UsernameLabel.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' PasswordLabel
         ' 
-        PasswordLabel.Location = New Point(172, 81)
+        PasswordLabel.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        PasswordLabel.Location = New Point(0, 101)
         PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New Size(220, 23)
+        PasswordLabel.Size = New Size(126, 23)
         PasswordLabel.TabIndex = 2
         PasswordLabel.Text = "&Password"
         PasswordLabel.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' UsernameTextBox
+        ' txtUsername
         ' 
-        UsernameTextBox.Location = New Point(174, 44)
-        UsernameTextBox.Name = "UsernameTextBox"
-        UsernameTextBox.Size = New Size(220, 23)
-        UsernameTextBox.TabIndex = 1
+        txtUsername.Location = New Point(132, 44)
+        txtUsername.Name = "txtUsername"
+        txtUsername.Size = New Size(220, 23)
+        txtUsername.TabIndex = 1
         ' 
-        ' PasswordTextBox
+        ' txtPassword
         ' 
-        PasswordTextBox.Location = New Point(174, 101)
-        PasswordTextBox.Name = "PasswordTextBox"
-        PasswordTextBox.PasswordChar = "*"c
-        PasswordTextBox.Size = New Size(220, 23)
-        PasswordTextBox.TabIndex = 3
+        txtPassword.Location = New Point(132, 102)
+        txtPassword.Name = "txtPassword"
+        txtPassword.PasswordChar = "*"c
+        txtPassword.Size = New Size(220, 23)
+        txtPassword.TabIndex = 3
         ' 
         ' OK
         ' 
+        OK.FlatStyle = FlatStyle.Flat
         OK.Location = New Point(197, 161)
         OK.Name = "OK"
         OK.Size = New Size(94, 23)
@@ -94,6 +84,7 @@ Partial Class LoginForm
         ' Cancel
         ' 
         Cancel.DialogResult = DialogResult.Cancel
+        Cancel.FlatStyle = FlatStyle.Flat
         Cancel.Location = New Point(300, 161)
         Cancel.Name = "Cancel"
         Cancel.Size = New Size(94, 23)
@@ -109,19 +100,16 @@ Partial Class LoginForm
         ClientSize = New Size(401, 192)
         Controls.Add(Cancel)
         Controls.Add(OK)
-        Controls.Add(PasswordTextBox)
-        Controls.Add(UsernameTextBox)
+        Controls.Add(txtPassword)
+        Controls.Add(txtUsername)
         Controls.Add(PasswordLabel)
         Controls.Add(UsernameLabel)
-        Controls.Add(LogoPictureBox)
-        FormBorderStyle = FormBorderStyle.FixedDialog
         MaximizeBox = False
         MinimizeBox = False
         Name = "LoginForm"
         SizeGripStyle = SizeGripStyle.Hide
         StartPosition = FormStartPosition.CenterParent
         Text = "Login"
-        CType(LogoPictureBox, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
 

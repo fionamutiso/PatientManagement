@@ -15,3 +15,7 @@ C:\Users\User\Desktop\PatientManagement\PatientManagement\PatientManagement\obj\
 C:\Users\User\Desktop\PatientManagement\PatientManagement\PatientManagement\obj\Debug\net8.0-windows\PatientManagement.pdb
 C:\Users\User\Desktop\PatientManagement\PatientManagement\PatientManagement\obj\Debug\net8.0-windows\PatientManagement.genruntimeconfig.cache
 C:\Users\User\Desktop\PatientManagement\PatientManagement\PatientManagement\obj\Debug\net8.0-windows\ref\PatientManagement.dll
+C:\Users\User\Desktop\PatientManagement\PatientManagement\PatientManagement\obj\Debug\net8.0-windows\PatientManagement.sourcelink.json
+C:\Users\User\Desktop\PatientManagement\PatientManagement\PatientManagement\obj\Debug\net8.0-windows\PatientManagement.Resources.resources
+C:\Users\User\Desktop\PatientManagement\PatientManagement\PatientManagement\obj\Debug\net8.0-windows\PatientManagement.Dashboard.resources
+C:\Users\User\Desktop\PatientManagement\PatientManagement\PatientManagement\obj\Debug\net8.0-windows\PatientManagement.patientsForm.resources
